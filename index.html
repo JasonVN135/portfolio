@@ -163,7 +163,7 @@
                             <div class="tag tag--ansible">
                                 <span class="body">
                                     <span class="tag__icon">
-                                        
+
                                     </span>
                                     <span class="tag__name">
                                         Ansible
@@ -254,9 +254,8 @@
                         </a>
                     </div>
                 </div>
-                <form id="contact-form" class="form" data-netlify="true">
+                <form id="contact-form" class="form" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact">
-
 
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -267,7 +266,9 @@
                     <label for="message">Message</label>
                     <textarea id="message" rows="10" name="message" required></textarea>
 
-                    <span class="error-message" id="messageError"></span>
+                    <p style="display:none">
+                        <label>Don't fill this out: <input name="bot-field"></label>
+                    </p>
 
                     <button id="contact-form-btn" type="submit">Send Message</button>
                 </form>
