@@ -7,25 +7,23 @@ export async function handler(event, context) {
     }
 
     const { name, email, message } = JSON.parse(event.body);
-    
-    const formData = new URLSearchParams();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
-    formData.append("access_key", process.env.PORTFOLIO_FORM_ACCESS_KEY); // Netlify env variable
-    
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-    console.log(formData);
-    console.log(json);
+
+    const payload = {
+        name,
+        email,
+        message,
+        access_key: process.env.PORTFOLIO_FORM_ACCESS_KEY
+    };
+    console.log(payload);
+    console.log(JSON>stringify(payload));
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            method: "POST",
-            body: json
+            body: JSON.stringify(payload)
         });
 
         const data = await response.json();
@@ -48,7 +46,7 @@ export async function handler(event, context) {
     } catch (error) {
         console.log(error);
         return {
-            
+
             statusCode: 500,
             body: JSON.stringify({ success: false, message: "Server error" })
         };
