@@ -7,3 +7,5 @@ function showSidebar() {
 function hideSidebar() {
     sidebar.style.display = "none";
 }
+
+console.log();
