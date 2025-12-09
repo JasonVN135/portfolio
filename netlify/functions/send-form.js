@@ -15,7 +15,7 @@ export async function handler(event, context) {
         access_key: process.env.PORTFOLIO_FORM_ACCESS_KEY
     };
     console.log(payload);
-    console.log(JSON>stringify(payload));
+    console.log(JSON.stringify(payload));
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
