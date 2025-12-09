@@ -73,17 +73,22 @@
         <section id="contact" class="contact-section">
             <h2>Contact</h2>
             <div class="group">
-                <form id="contact-form" class="form">
+                <form id="contact-form-page" class="form" method="POST" data-netlify="true"
+                    data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" name="name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" rows="10"></textarea>
+                    <textarea id="message" rows="10" name="message" required></textarea>
 
-                    <span class="error-message" id="messageError"></span>
+                    <p style="display:none">
+                        <label>Don't fill this out: <input name="bot-field"></label>
+                    </p>
 
                     <button id="contact-form-btn" type="submit">Send Message</button>
                 </form>
