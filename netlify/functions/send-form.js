@@ -13,17 +13,18 @@ export async function handler(event, context) {
     formData.append("email", email);
     formData.append("message", message);
     formData.append("access_key", process.env.PORTFOLIO_FORM_ACCESS_KEY); // Netlify env variable
-    console.log("Form");
-    console.log(formData)
+    
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            body: formData
+            body: json
         });
 
         const data = await response.json();
-        console.log("DATA");
-        console.log(data);
 
         if (response.ok) {
             console.log("Response is ok");
