@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="icon-btn.css">
+    <link rel="stylesheet" href="icon-tag.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="sidebar">
+            <li class="closs-btn">
+                <a onclick="hideSidebar()">
+                    <span class="icon-btn__icon icon-btn__icon--close"></span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="normal">
+            <li>
+                <a href="index.html">
+                    <span>Jason Nguyen</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li class="menu-btn" onclick="showSidebar()">
+                <a>
+                    <span class="icon-btn__icon icon-btn__icon--menu"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
+        <!-- SECTION 1: HERO -->
+        <section id="hero" class="hero-section">
+            <div class="text">
+                <h2>Hi, I'm Jason!</h2>
+                <p>I'm a <span class="color-primary">Computer Science Graduate</span> from the North Carolina State
+                    University that loves programming and game design. I plan to showcase all of my projects whether it
+                    be <span class="color-primary">Software Development</span> or <span class="color-primary">Game
+                        Jams</span>. Check them out here and feel free to contact me!
+                </p>
+                <div class="links">
+                    <a href="#skills">
+                        <span class="icon-btn__icon small icon-btn__icon--code"></span>
+                        <span class="text">Skills</span>
+                    </a>
+                    <a href="#projects">
+                        <span class="icon-btn__icon small icon-btn__icon--project"></span>
+                        <span class="text">Projects</span>
+                    </a>
+                    <a href="#contact">
+                        <span class="icon-btn__icon small icon-btn__icon--contact"></span>
+                        <span class="text">Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="headshot">
+                <img src="images/headshot.webp" alt="Jason Nguyen Headshot">
+            </div>
+        </section>
+
+        <!-- SECTION 2: SKILLS -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="text">
+                Below are my skills in both Software Development and Game Development. I'm always looking to learn more!
+            </div>
+            <div class="cells">
+                <a class="cell" href="https://icons8.com/">
+                    <img src="images/python-icon.webp">
+                    <span>Python</span>
+                </a>
+                <a class="cell" href="https://icons8.com/">
+                    <img src="images/html-icon.webp">
+                    <span>HTML</span>
+                </a>
+                <a class="cell" href="https://icons8.com/">
+                    <img src="images/css-icon.webp">
+                    <span>CSS</span>
+                </a>
+                <a class="cell" href="https://icons8.com/">
+                    <img src="images/js-icon.webp">
+                    <span>JavaScript</span>
+                </a>
+                <a class="cell">
+                    <img src="images/ansible-icon.webp">
+                    <span>Ansible</span>
+                </a>
+                <a class="cell">
+                    <img src="images/godot-icon.webp">
+                    <span>Godot</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PROJECTS -->
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="subtext">
+                Here are my latest projects
+            </div>
+            <div class="project-cards">
+                <div class="card">
+                    <img src="images/thumbnail-4.webp">
+                    <div class="header-container">
+                        <h3>Project Name</h3>
+                        <div class="tags">
+                            <div class="tag tag--js">
+                                <span class="body">
+                                    <span class="tag__icon"></span>
+                                    <span class="tag__name">
+                                        JavaScript
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="tag tag--python">
+                                <span class="body">
+                                    <span class="tag__icon"></span>
+                                    <span class="tag__name">
+                                        Python
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="tag tag--ansible">
+                                <span class="body">
+                                    <span class="tag__icon">
+                                        
+                                    </span>
+                                    <span class="tag__name">
+                                        Ansible
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                    </span>
+                    <div class="description-container">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At consequuntur aliquid repellat
+                            laudantium blanditiis, nihil soluta sequi voluptatem? Quas repudiandae error odio ad!
+                            Dignissimos, qui.
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/thumbnail-4.webp">
+                    <div class="header-container">
+                        <h3>Project Name</h3>
+                        <div class="tags">
+                            <div class="tag tag--js">
+                                <span class="body">
+                                    <span class="tag__icon"></span>
+                                    <span class="tag__name">
+                                        JavaScript
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-container">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At consequuntur aliquid repellat
+                            laudantium blanditiis, nihil soluta sequi voluptatem? Quas repudiandae error odio ad!
+                            Dignissimos, qui.
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/thumbnail-4.webp">
+                    <div class="header-container">
+                        <h3>Project Name</h3>
+                        <div class="tags">
+                            <div class="tag tag--js">
+                                <span class="body">
+                                    <span class="tag__icon"></span>
+                                    <span class="tag__name">
+                                        JavaScript
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-container">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At consequuntur aliquid repellat
+                            laudantium blanditiis, nihil soluta sequi voluptatem? Quas repudiandae error odio ad!
+                            Dignissimos, qui.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: CONTACT -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="group">
+                <div class="info">
+                    <div class="text">
+                        I'm always open to new opportunities, collaborations, or interesting projects. If you have an
+                        questions,
+                        ideas, or just want to connect and talk, feel free to reach out!
+                    </div>
+                    <div class="socials">
+                        <a target="_blank" href="https://www.linkedin.com/in/jasonnguyen0914/">
+                            <span class="icon-btn__icon small icon-btn__icon--linkedin"></span>
+                            <span class="social-text">LinkedIn</span>
+                        </a>
+                        <a href="mailto:jasonvu135@gmail.com">
+                            <span class="icon-btn__icon small icon-btn__icon--email"></span>
+                            <span class="social-text">Email</span>
+                        </a>
+                        <a href="#skills">
+                            <span class="icon-btn__icon small icon-btn__icon--resume"></span>
+                            <span class="social-text">Resume</span>
+                        </a>
+                    </div>
+                </div>
+                <form id="contact-form" class="form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="10"></textarea>
+
+                    <span class="error-message" id="messageError"></span>
+
+                    <button id="contact-form-btn"  type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"> </script>
+</body>
+
+</html>

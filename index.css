@@ -1,0 +1,355 @@
+/* ============================================
+   SECTION 1: HERO
+   ============================================ */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-4xl) 0;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text p {
+    color: var(--color-text-muted);
+}
+.hero-section .text h2 {
+    font: var(--typography-title);
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero-section .links {
+    margin-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.hero-section .links a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary-base);
+    font-weight: 500;
+    border-radius: 4px;
+    border: 2px solid var(--color-secondary-base);
+    padding: 6px 12px;
+    transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+.hero-section .links a .icon-btn__icon {
+    margin-right: var(--spacing-2xs);
+    background-color: var(--color-secondary-base);
+}
+
+.hero-section .headshot {
+    flex: 2;
+    border-radius: 40px;
+}
+
+.hero-section .headshot img {
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 40px;
+}
+
+.hero-section .links a:hover {
+    background-color: var(--color-secondary-base);
+}
+
+.hero-section .links a:hover .text {
+    color: var(--color-text-primary);
+}
+
+.hero-section .links a:hover .icon-btn__icon {
+    background-color: var(--color-text-primary);
+}
+
+
+/* ============================================
+   SECTION 2: SKILLS
+   ============================================ */
+
+.skills-section {
+    margin: var(--spacing-5xl) 0;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font: var(--typography-heading-large);
+    margin-bottom: var(--spacing-lg);
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    font: var(--typography-body-large);
+    font-weight: 500;
+    gap: var(--spacing-md);
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+
+/* ============================================
+   SECTION 3: PROJECTS
+   ============================================ */
+
+.projects-section {
+    margin: var(--spacing-5xl) 0;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font: var(--typography-heading-large);
+    margin-bottom: var(--spacing-lg);
+}
+
+.projects-section .subtext {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.projects-section .project-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 var(--spacing-xl);
+    justify-content: center;
+    gap: var(--spacing-3xl);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - var(--spacing-3xl) / 2);
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.card img {
+    border-radius: 16px;
+}
+
+.card .header-container {
+    margin-top: var(--spacing-md);
+    border-bottom: solid 1px var(--color-border);
+}
+
+.card .header-container h3 {
+    font: var(--typography-heading-small);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card .description-container {
+    margin-top: var(--spacing-sm);
+    color: var(--color-text-muted);
+}
+
+/* --------------------------------------------
+    PROJECT TAGS
+   -------------------------------------------- */
+
+.tags {
+    display: flex;
+    margin: var(--spacing-xs) 0;
+    gap: var(--spacing-xs);
+}
+
+.tags .tag {
+    min-width: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tags .tag .body {
+    padding: 2px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tags .tag .tag__icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-right: var(--spacing-2xs);
+}
+
+.tags .tag .tag__name {
+    font: var(--typography-body-small);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* ============================================
+   SECTION 4: CONTACT
+   ============================================ */
+
+.contact-section {
+    margin: var(--spacing-5xl) 0;
+}
+
+.contact-section h2 {
+    font: var(--typography-heading-large);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-section .group {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.contact-section .info {
+    flex: 3;
+}
+
+.contact-section .info .text {
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-section .info .socials {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.contact-section .info .socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-primary);
+    font-weight: 500;
+    border-radius: 4px;
+    background-color:  var(--color-input);
+    padding: 8px 16px;
+    transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+.contact-section .info .socials a .icon-btn__icon {
+    margin-right: var(--spacing-2xs);
+    background-color: var(--color-primary-base);
+}
+
+
+.contact-section .info .socials a:hover {
+    background-color: var(--color-primary-base);
+}
+
+.contact-section .info .socials a:hover .social-text {
+    color: var(--color-text-primary);
+}
+
+.contact-section .info .socials a:hover .icon-btn__icon {
+    background-color: var(--color-text-primary);
+}
+
+.contact-section .form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .form label {
+    margin-bottom: var(--spacing-2xs);
+}
+
+
+.contact-section .form input,
+.contact-section .form textarea {
+    background-color: var(--color-input);
+    border: solid 2px var(--color-border);
+    border-radius: 4px;
+    color: var(--color-text-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    min-height: 36px;
+    margin-bottom: var(--spacing-md);
+    outline: none;
+    width: 100%;
+    resize: none;
+    font: var(--typography-body-small);
+}
+
+.contact-section .form button {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary-base);
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-secondary-base);
+    padding: 12px 24px;
+    transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+.contact-section .form button:hover {
+    background-color: var(--color-secondary-base);
+    color: var(--color-text-primary);
+}
+
+
+
+@media (max-width: 850px) {
+
+    /* SECTION 1: HERO */
+    .hero-section .text h2 {
+        font: var(--typography-heading-medium);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* SECTION 1: HERO */
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img {
+        width: 450px;
+        height: 300px;
+    }
+
+    /* SECTION 3: PROJECTS */
+    .card {
+        width: 90%;
+    }
+
+    /* SECTION 4: CONTACT */
+    .contact-section .group {
+        flex-direction: column;
+    }
+}

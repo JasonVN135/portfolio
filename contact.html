@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="icon-btn.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Contact</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="sidebar">
+            <li class="close-btn">
+                <a onclick="hideSidebar()">
+                    <span class="icon-btn__icon icon-btn__icon--close"></span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="normal">
+            <li>
+                <a href="index.html">
+                    <span>Jason Nguyen</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li class="menu-btn" onclick="showSidebar()">
+                <a>
+                    <span class="icon-btn__icon icon-btn__icon--menu"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
+
+        <!-- SECTION 1: CONTACT -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="group">
+                <form id="contact-form" class="form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="10"></textarea>
+
+                    <span class="error-message" id="messageError"></span>
+
+                    <button id="contact-form-btn" type="submit">Send Message</button>
+                </form>
+                <div class="info">
+                    <div class="socials">
+                        <a target="_blank" href="https://www.linkedin.com/in/jasonnguyen0914/">
+                            <span class="icon-btn__icon small icon-btn__icon--linkedin"></span>
+                            <span class="social-text">LinkedIn</span>
+                        </a>
+                        <a href="mailto:jasonvu135@gmail.com">
+                            <span class="icon-btn__icon small icon-btn__icon--email"></span>
+                            <span class="social-text">Email</span>
+                        </a>
+                        <a href="#skills">
+                            <span class="icon-btn__icon small icon-btn__icon--resume"></span>
+                            <span class="social-text">Resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"> </script>
+</body>
+
+</html>
