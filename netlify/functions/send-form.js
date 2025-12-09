@@ -1,9 +1,6 @@
 export async function handler(event, context) {
     if (event.httpMethod !== "POST") {
-        return {
-            statusCode: 405,
-            body: JSON.stringify({ message: "Method Not Allowed" })
-        };
+        return { statusCode: 405, body: JSON.stringify({ message: "Method Not Allowed" }) };
     }
 
     const { name, email, message } = JSON.parse(event.body);
@@ -14,8 +11,7 @@ export async function handler(event, context) {
         message,
         access_key: process.env.PORTFOLIO_FORM_ACCESS_KEY
     };
-    console.log(payload);
-    console.log(JSON.stringify(payload));
+
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -26,29 +22,27 @@ export async function handler(event, context) {
             body: JSON.stringify(payload)
         });
 
-        const data = await response.json();
-        console.log(data);
+        const contentType = response.headers.get("content-type") || "";
+        let data;
 
-        if (response.ok) {
-            console.log("Response is ok");
-            return {
-
-                statusCode: 200,
-                body: JSON.stringify({ success: true })
-            };
+        if (contentType.includes("application/json")) {
+            data = await response.json();
         } else {
-            console.log("Response is not ok 400");
+            const text = await response.text();
+            console.error("Expected JSON, got:", text);
             return {
-                statusCode: 400,
-                body: JSON.stringify({ success: false, message: data.message })
+                statusCode: 500,
+                body: JSON.stringify({ success: false, message: "Invalid response from Web3Form" })
             };
         }
-    } catch (error) {
-        console.log(error);
-        return {
 
-            statusCode: 500,
-            body: JSON.stringify({ success: false, message: "Server error" })
-        };
+        if (response.ok) {
+            return { statusCode: 200, body: JSON.stringify({ success: true }) };
+        } else {
+            return { statusCode: 400, body: JSON.stringify({ success: false, message: data.message }) };
+        }
+    } catch (error) {
+        console.error(error);
+        return { statusCode: 500, body: JSON.stringify({ success: false, message: "Server error" }) };
     }
 }
