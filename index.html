@@ -254,23 +254,25 @@
                         </a>
                     </div>
                 </div>
-                <form id="contact-form" class="form" data-netlify="true" data-netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="contact">
-
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="10" name="message" required></textarea>
-
-                    <p style="display:none">
-                        <label>Don't fill this out: <input name="bot-field"></label>
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                        <label>Your Name: <input type="text" name="name" /></label>
                     </p>
-
-                    <button id="contact-form-btn" type="submit">Send Message</button>
+                    <p>
+                        <label>Your Email: <input type="email" name="email" /></label>
+                    </p>
+                    <p>
+                        <label>Your Role: <select name="role[]" multiple>
+                                <option value="leader">Leader</option>
+                                <option value="follower">Follower</option>
+                            </select></label>
+                    </p>
+                    <p>
+                        <label>Message: <textarea name="message"></textarea></label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
                 </form>
             </div>
         </section>
