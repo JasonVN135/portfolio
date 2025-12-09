@@ -46,7 +46,7 @@ export async function handler(event, context) {
             };
         }
     } catch (error) {
-        console.log("Response is not ok 560");
+        console.log(error);
         return {
             
             statusCode: 500,
