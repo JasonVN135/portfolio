@@ -16,15 +16,20 @@ export async function handler(event, context) {
     
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-
-
+    console.log(formData);
+    console.log(json);
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
             method: "POST",
             body: json
         });
 
         const data = await response.json();
+        console.log(data);
 
         if (response.ok) {
             console.log("Response is ok");
