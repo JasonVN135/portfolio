@@ -118,9 +118,22 @@
 
 @media (max-width: 900px) {
 
+    #main {
+        padding: var(--spacing-md);
+    }
 
     /* SECTION 4: CONTACT */
     .contact-section {
-        margin: var(--spacing-5xl) var(--spacing-2xl);
+        margin: var(--spacing-4xl) var(--spacing-sm);
+    }
+}
+
+@media (max-width: 450px) {
+
+    /* SECTION 4: SOCIALS */
+    .contact-section .info .socials {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
     }
 }

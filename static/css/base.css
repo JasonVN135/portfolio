@@ -1,41 +1,59 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-sizing: border-box;
-}
-
 :root {
+    /* Add fallback hex colors */
+    --color-black-darkest: #0d0d0d;
+    --color-black-darkest-hsl: hsl(0, 0%, 5%);
+    --color-black-dark: #171717;
+    --color-black-dark-hsl: hsl(0, 0%, 9%);
+    --color-black-base: #212121;
+    --color-black-base-hsl: hsl(0, 0%, 13%);
+    --color-black-light: #2b2b2b;
+    --color-black-light-hsl: hsl(0, 0%, 17%);
+    --color-black-lightest: #353535;
+    --color-black-lightest-hsl: hsl(0, 0%, 21%);
 
-    --color-black-darkest: hsl(0 0 5%);
-    --color-black-dark: hsl(0 0 9%);
-    --color-black-base: hsl(0 0 13%);
-    --color-black-light: hsl(0 0 17%);
-    --color-black-lightest: hsl(0 0 21%);
+    --color-white-darkest: #999999;
+    --color-white-darkest-hsl: hsl(0, 0%, 60%);
+    --color-white-dark: #b3b3b3;
+    --color-white-dark-hsl: hsl(0, 0%, 70%);
+    --color-white-base: #cccccc;
+    --color-white-base-hsl: hsl(0, 0%, 80%);
+    --color-white-light: #e6e6e6;
+    --color-white-light-hsl: hsl(0, 0%, 90%);
+    --color-white-lightest: #ffffff;
+    --color-white-lightest-hsl: hsl(0, 0%, 100%);
 
-    --color-white-darkest: hsl(0 0 60%);
-    --color-white-dark: hsl(0 0 70%);
-    --color-white-base: hsl(0 0 80%);
-    --color-white-light: hsl(0 0 90%);
-    --color-white-lightest: hsl(0 0 100%);
+    --color-primary-darkest: #2d9d6d;
+    --color-primary-darkest-hsl: hsl(155, 60%, 42%);
+    --color-primary-dark: #33ad78;
+    --color-primary-dark-hsl: hsl(155, 60%, 47%);
+    --color-primary-base: #3abd85;
+    --color-primary-base-hsl: hsl(155, 60%, 52%);
+    --color-primary-light: #51c792;
+    --color-primary-light-hsl: hsl(155, 60%, 57%);
+    --color-primary-lightest: #68d19f;
+    --color-primary-lightest-hsl: hsl(155, 60%, 62%);
 
-    --color-primary-darkest: hsl(155 60 42%);
-    --color-primary-dark: hsl(155 60 47%);
-    --color-primary-base: hsl(155 60 52%);
-    --color-primary-light: hsl(155 60 57%);
-    --color-primary-lightest: hsl(155 60 62%);
+    --color-accent-darkest: #8533ad;
+    --color-accent-darkest-hsl: hsl(275, 60%, 47%);
+    --color-accent-dark: #9540bd;
+    --color-accent-dark-hsl: hsl(275, 60%, 52%);
+    --color-accent-base: #a557c7;
+    --color-accent-base-hsl: hsl(275, 60%, 57%);
+    --color-accent-light: #b56ed1;
+    --color-accent-light-hsl: hsl(275, 60%, 62%);
+    --color-accent-lightest: #c585db;
+    --color-accent-lightest-hsl: hsl(275, 60%, 67%);
 
-    --color-accent-darkest: hsl(275 60 47%);
-    --color-accent-dark: hsl(275 60 52%);
-    --color-accent-base: hsl(275 60 57%);
-    --color-accent-light: hsl(275 60 62%);
-    --color-accent-lightest: hsl(275 60 67%);
-
-    --color-secondary-darkest: hsl(35 60 42%);
-    --color-secondary-dark: hsl(35 60 47%);
-    --color-secondary-base: hsl(35 60 52%);
-    --color-secondary-light: hsl(35 60 57%);
-    --color-secondary-lightest: hsl(35 60 62%);
+    --color-secondary-darkest: #ad7033;
+    --color-secondary-darkest-hsl: hsl(35, 60%, 42%);
+    --color-secondary-dark: #bd7d3a;
+    --color-secondary-dark-hsl: hsl(35, 60%, 47%);
+    --color-secondary-base: #cc8a42;
+    --color-secondary-base-hsl: hsl(35, 60%, 52%);
+    --color-secondary-light: #d69851;
+    --color-secondary-light-hsl: hsl(35, 60%, 57%);
+    --color-secondary-lightest: #e0a660;
+    --color-secondary-lightest-hsl: hsl(35, 60%, 62%);
 
     --color-text-primary: var(--color-white-lightest);
     --color-text-muted: var(--color-white-darkest);
@@ -92,8 +110,6 @@ body {
     background: var(--color-background);
     max-width: 1400px;
     margin: 0 auto;
-
-
 }
 
 button {
@@ -212,6 +228,8 @@ a {
 
 .color-primary {
     color: var(--color-primary-base);
+    /* Fallback for older browsers */
+    color: #3abd85;
 }
 
 .error-message {
