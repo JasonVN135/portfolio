@@ -465,6 +465,12 @@ section {
         width: 90%;
     }
 
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
     /* SECTION 4: CONTACT */
     .contact-section .group {
         flex-direction: column;
