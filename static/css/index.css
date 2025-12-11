@@ -53,55 +53,71 @@
 
 
 
-.scroll-element, .card {
+.scroll-element,
+.card {
     animation: scroll-appear ease-out;
     animation-timeline: view();
-    animation-range: entry 0 cover 35%;
+    animation-range: entry 0 cover 30%;
 }
 
 #navbar {
-    animation: drop-appear 1s ease-in-out;
-}
-
-#navbar {
-    animation: drop-appear 1s ease-in-out;
+    animation: drop-appear 0.7s ease-out;
 }
 
 #hero .text h2 {
-    animation: fade-in-appear 1s ease-in-out forwards;
+    animation: fade-in-appear 0.6s ease-in-out forwards;
     opacity: 0;
-    animation-delay: 1s;
+    animation-delay: 0.6s;
 }
 
 #hero .text p {
-    animation: fade-in-appear 1s ease-in-out forwards;
+    animation: fade-in-appear 0.6s ease-in-out forwards;
     opacity: 0;
-    animation-delay: 1.1s;
+    animation-delay: 1.0s;
 }
-
-#hero .text .links > * {
-    animation: fade-in-appear 1s ease-in-out forwards;
-    opacity: 0;
-}
-
-#hero .text .links > *:nth-child(1) { animation-delay: 1.25s; }
-#hero .text .links > *:nth-child(2) { animation-delay: 1.35s; }
-#hero .text .links > *:nth-child(3) { animation-delay: 1.45s; }
-
 
 #hero .headshot {
-    animation: fade-in-appear 1s ease-in-out forwards;
+    animation: fade-in-appear 0.8s ease-in-out forwards;
     opacity: 0;
+    animation-delay: 1.2s;
+}
+
+
+#hero .text .links>* {
+    animation: fade-in-appear 0.6s ease-in-out forwards;
+    opacity: 0;
+}
+
+
+#hero .text .links>*:nth-child(1) {
     animation-delay: 1.5s;
 }
+
+#hero .text .links>*:nth-child(2) {
+    animation-delay: 1.7s;
+}
+
+#hero .text .links>*:nth-child(3) {
+    animation-delay: 1.9s;
+}
+
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+section {
+    margin: var(--section-margin-full) 0;
+}
+
 
 /* ============================================
    SECTION 1: HERO
    ============================================ */
+
 .hero-section {
     display: flex;
     justify-content: space-between;
-    margin: var(--spacing-5xl) 0;
     align-items: center;
     gap: var(--spacing-lg);
 }
@@ -160,6 +176,11 @@
     background-color: var(--color-secondary-base);
 }
 
+.hero-section .links a:active {
+    background-color: var(--color-secondary-lightest);
+    border-color: var(--color-secondary-lightest);
+}
+
 .hero-section .links a:hover .text {
     color: var(--color-text-primary);
 }
@@ -172,10 +193,6 @@
 /* ============================================
    SECTION 2: SKILLS
    ============================================ */
-
-.skills-section {
-    margin: var(--spacing-5xl) 0;
-}
 
 .skills-section h2 {
     text-align: center;
@@ -220,10 +237,6 @@
 /* ============================================
    SECTION 3: PROJECTS
    ============================================ */
-
-.projects-section {
-    margin: var(--spacing-5xl) 0;
-}
 
 .projects-section h2 {
     text-align: center;
@@ -316,9 +329,6 @@
    SECTION 4: CONTACT
    ============================================ */
 
-.contact-section {
-    margin: var(--spacing-5xl) 0;
-}
 
 .contact-section h2 {
     font: var(--typography-heading-large);
@@ -363,6 +373,10 @@
 
 .contact-section .info .socials a:hover {
     background-color: var(--color-primary-base);
+}
+
+.contact-section .info .socials a:active {
+    background-color: var(--color-primary-lightest);
 }
 
 .contact-section .info .socials a:hover .social-text {
@@ -423,8 +437,16 @@
 @media (max-width: 850px) {
 
     /* SECTION 1: HERO */
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+
     .hero-section .text h2 {
         font: var(--typography-heading-medium);
+    }
+
+    section {
+        margin: var(--section-margin-mobile) 0;
     }
 
 }
@@ -433,13 +455,9 @@
 @media (max-width: 600px) {
 
     /* SECTION 1: HERO */
-    .hero-section {
-        flex-direction: column-reverse;
-    }
-
     .hero-section .headshot img {
-        width: 450px;
-        height: 300px;
+        width: 420px;
+        height: 280px;
     }
 
     /* SECTION 3: PROJECTS */
@@ -451,6 +469,18 @@
     .contact-section .group {
         flex-direction: column;
     }
+
+    .contact-section .form {
+        width: 100%;
+
+    }
+
+    .contact-section .form input,
+    .contact-section .form textarea {
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 450px) {
@@ -461,7 +491,7 @@
         flex-direction: column;
         gap: var(--spacing-md);
     }
-    
+
     .hero-section .headshot img {
         width: 300px;
         height: 200px;
@@ -493,5 +523,12 @@
         display: flex;
         flex-direction: column;
         gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 300px) {
+    .hero-section .headshot img {
+        width: 270px;
+        height: 180px;
     }
 }
