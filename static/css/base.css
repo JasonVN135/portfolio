@@ -104,9 +104,9 @@
     --side-padding-full: var(--spacing-2xl);
     --side-padding-mobile: var(--spacing-md);
     --section-margin-full: var(--spacing-5xl);
-    --section-margin-mobile: var(--spacing-xl);
+    --section-margin-mobile: var(--spacing-4xl);
 
-    --navbar-height: var(--spacing-3xl);
+    --navbar-height: var(--spacing-4xl);
     --sidebar-width: 400px;
 }
 
