@@ -542,3 +542,15 @@ section {
         height: 180px;
     }
 }
+
+@media (max-height: 900px) {
+    .hero-section {
+        margin-top: var(--spacing-xl);
+    }
+}
+
+@media (max-height: 700px) {
+    .hero-section {
+        margin-top: var(--spacing-sm);
+    }
+}

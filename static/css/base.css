@@ -278,3 +278,9 @@ a {
 section {
     scroll-margin-top: calc(var(--navbar-height) + 20px); /* equal to your navbar height */
 }
+
+@media (max-height: 700px) {
+    #main {
+        padding-top: var(--spacing-lg);
+    }
+}
