@@ -92,6 +92,11 @@
     font: var(--typography-body-small);
 }
 
+.contact-section .form input:focus,
+.contact-section .form textarea:focus {
+    border-color: var(--color-primary-base);
+}
+
 .contact-section .form button {
     
     display: flex;

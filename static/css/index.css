@@ -264,6 +264,14 @@ section {
     width: calc(50% - var(--spacing-3xl) / 2);
     max-width: 600px;
     margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    transition: background-color 100ms ease-in-out;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: var(--color-card);
 }
 
 .card img {
@@ -273,6 +281,15 @@ section {
 .card .header-container {
     margin-top: var(--spacing-md);
     border-bottom: solid 1px var(--color-border);
+}
+
+.card-heading-wrapper {
+    display: flex;
+}
+
+.card-heading-wrapper span {
+    margin-left: auto;
+    background-color: var(--color-text-primary);
 }
 
 .card .header-container h3 {
@@ -413,6 +430,11 @@ section {
     font: var(--typography-body-small);
 }
 
+.contact-section .form input:focus,
+.contact-section .form textarea:focus {
+    border-color: var(--color-primary-base);
+}
+
 .contact-section .form button {
 
     display: flex;
@@ -462,7 +484,9 @@ section {
 
     /* SECTION 3: PROJECTS */
     .card {
+        padding: var(--spacing-xs);
         width: 90%;
+        border-radius: 16px;
     }
 
     .card img {
@@ -473,6 +497,7 @@ section {
 
     .projects-section .project-cards {
         gap: var(--spacing-sm);
+        padding: 0;
     }
 
     /* SECTION 4: CONTACT */

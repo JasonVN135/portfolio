@@ -78,9 +78,10 @@
 
     --typography-body-largest: 1.4rem / 1.5em var(--font-family-primary);
     --typography-body-large: 1.2rem / 1.5em var(--font-family-primary);
-    --typography-body-base: 1.0rem / 1.5em var(--font-family-primary);
+    --typography-body-base: 1.0rem / 1.5em var(--font-fam   ily-primary);
     --typography-body-small: 0.8rem / 1.5em var(--font-family-primary);
     --typography-body-smallest: 0.6rem / 1.5em var(--font-family-primary);
+    --typography-heading-largest: 600 3rem/1.2em var(--font-family-secondary);
     --typography-heading-large: 600 2rem/1.2em var(--font-family-secondary);
     --typography-heading-medium: 600 1.75rem/ 1.2em var(--font-family-secondary);
     --typography-heading-small: 600 1.5rem/ 1.2em var(--font-family-secondary);
@@ -101,7 +102,7 @@
 
     --mobile-width: 800px;
 
-    --side-padding-full: var(--spacing-2xl);
+    --side-padding-full: var(--spacing-4xl);
     --side-padding-mobile: var(--spacing-md);
     --section-margin-full: var(--spacing-5xl);
     --section-margin-mobile: var(--spacing-4xl);
@@ -135,7 +136,7 @@ a {
 
 #main {
     margin-top: var(--navbar-height);
-    padding: var(--spacing-xl) var(--spacing-2xl);
+    padding: var(--spacing-2xl) var(--side-padding-full);
 }
 
 /* ============================================

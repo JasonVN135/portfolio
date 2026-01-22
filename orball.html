@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="static/css/base.css">
-    <link rel="stylesheet" href="static/css/projects.css">
+    <link rel="stylesheet" href="static/css/pages.css">
     <link rel="stylesheet" href="static/css/icon-btn.css">
-    <link rel="stylesheet" href="static/css/icon-tag.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <title>Projects</title>
+    <title>Contact</title>
 </head>
 
 <body>
@@ -69,48 +68,29 @@
         </ul>
     </nav>
     <main id="main">
-        <section id="projects" class="projects-section scroll-element">
-            <div class="heading">
-                <h1>Projects</h1>
-                <div class="subtext scroll-element">
-                    I love to work on small projects whenever I get the chance. Feel free to check them out below.
-                </div>
-                <div class="input-wrapper">
-                    <input type="text" class="card--input" placeholder="Search Project">
-                    <span class="icon-btn__icon icon-btn__icon--search"></span>
-                </div>
-            </div>
 
-            <div class="project-cards">
-                <div class="card">
-                    <img src="images/orball/cover.png">
-                    <div class="header-container">
-                        <div class="card-heading-wrapper">
-                            <h3>Orball</h3>
-                            <span class="icon-btn__icon icon-btn__icon--open"></span>
-                        </div>
-                        <div class="tags">
-                            <div class="tag tag--godot">
-                                <span class="body">
-                                    <span class="tag__icon"></span>
-                                    <span class="tag__name">
-                                        Godot
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <span>
-                    </span>
-                    <div class="description-container">
-                        <span>Control an orange ball inside an octagon,
-                            crashing into flying balls to build momentum and score points.
-                            Spend your built-up charges on powerful abilities to survive tougher
-                            enemies and chase a high score.
-                        </span>
-                    </div>
-                </div>
+        <!-- SECTION 1: HEADER -->
+        <section id="header-section">
+            <img src="images/orball/cover.png">
+            <h1>Orball</h1>
+            <div class="subheading">
+                <span class="date">December 21st, 2025</span>
+                <a href="https://kayninezz.itch.io/orball" target="_blank" rel="noopener noreferrer" class="itch-link">
+                    <span class="icon-btn__icon small icon-btn__icon--itchio"></span>
+                    <span class="text">itch.io</span>
+                </a>
             </div>
+        </section>
+        <section id="body-section">
+            <h2>Overview</h2>
+            <p>Orball is a simple high score arcade game where you steer your orange ball to collide with incoming balls to destroy and increase your high score.
+                Colliding with other balls will increase your speed, unlocking abilities to help clear the area faster but becoming more difficult to steer.
+            </p>
+            <h2>Project Goal</h2>
+            <p>Orball is a game jam submission for the <a href="https://itch.io/jam/godot-wild-jam-88">Godot Wild Jam #88</a> event. The Game Jam took place over
+            10 days, where participants were tasked to finish creating a video game following the Jam's prompt <strong>Momentum</strong>.</p>
+            <h2>Development</h2>
+            <h2>Results and Review</h2>
         </section>
     </main>
     <script src="static/js/script.js"> </script>

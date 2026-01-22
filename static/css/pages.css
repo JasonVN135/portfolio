@@ -1,0 +1,80 @@
+h1 {
+    font: var(--typography-heading-largest);
+    font-weight: bold;
+    margin: var(--spacing-lg) 0;
+}
+
+h2 {
+    font: var(--typography-heading-large);
+    font-weight: bold;
+    border-left: solid 4px var(--color-primary-base);
+    padding-left: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+h3 {
+    font: var(--typography-heading-medium);
+}
+
+p {
+    font: var(--typography-body-large);
+}
+
+
+#header-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: var(--spacing-xl);
+    border-bottom: solid 2px var(--color-border);
+    margin-bottom: var(--spacing-2xl);
+}
+
+#header-section img {
+    border-radius: 16px;
+}
+
+#header-section .date {
+    margin-right: var(--spacing-lg);
+}
+
+.subheading {
+    font: var(--typography-body-base);
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    font-weight: 600;
+}
+
+#header-section .itch-link {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;  
+    color: var(--color-primary-base); 
+}
+
+#header-section .date {
+    color: var(--color-text-muted);
+}
+
+#header-section .itch-link .icon-btn__icon {
+    background-color: var(--color-primary-base);
+}
+
+#header-section .itch-link .text {
+    margin-left: var(--spacing-2xs);
+}
+
+#header-section .itch-link:hover .icon-btn__icon {
+    background-color: var(--color-primary-lightest);
+}
+
+#header-section .itch-link:hover .text {
+    color: var(--color-primary-lightest); 
+}
+
+#body-section a {
+    color: var(--color-primary-light);
+    text-decoration-line: underline;
+}
