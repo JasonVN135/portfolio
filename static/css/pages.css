@@ -18,8 +18,13 @@ h3 {
 
 p {
     font: var(--typography-body-large);
+    margin-bottom: var(--spacing-xs);
 }
 
+ul {
+    font: var(--typography-body-large);
+    padding-left: var(--spacing-lg);
+}
 
 #header-section {
     display: flex;
