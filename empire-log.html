@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/pages.css">
+    <link rel="stylesheet" href="static/css/icon-btn.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Empire Logistics</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="sidebar">
+            <li class="close-btn">
+                <a onclick="hideSidebar()">
+                    <span class="icon-btn__icon icon-btn__icon--close"></span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="normal">
+            <li>
+                <a href="index.html">
+                    <span>Jason Nguyen</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li class="menu-btn" onclick="showSidebar()">
+                <a>
+                    <span class="icon-btn__icon icon-btn__icon--menu"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
+
+        <!-- SECTION 1: HEADER -->
+        <section id="header-section">
+            <img src="images/empire-log/cover.png">
+            <h1>Empire Logistics</h1>
+            <div class="subheading">
+                <span class="date">January 21st, 2026</span>
+                <a href="https://github.com/JasonVN135/empire-management" target="_blank" rel="noopener noreferrer" class="header-link">
+                    <span class="icon-btn__icon small icon-btn__icon--github"></span>
+                    <span class="text">GitHub</span>
+                </a>
+                <a href="https://empireld-performances.netlify.app/" target="_blank" rel="noopener noreferrer" class="header-link">
+                    <span class="text">Website</span>
+                </a>
+            </div>
+        </section>
+        <section id="body-section">
+            <h2>Overview</h2>
+            <p>The Empire Logistics page is a page dedicated to the Empire Lion Dance LLC team that myself and 2 others manage. The purpose of this site is to have a centralized location of gaining availability of our performers and a place for our members to see our upcoming performances.
+            </p>
+            <h2>Project Goal</h2>
+            <p>The team needed a centralized place to keep track of which performances were coming up and needed performers. Members would frequently rely on managers to know which performances they were doing and when they'll be needed next. Knowing members also did not want to create a new account for already established applications, a site was the best decision to complete these requirements.</p>
+            <h2>Tech Stack</h2>
+            <p>
+                Written in <i>HTML, CSS, and JavaScript, along with Netlify Forms.</i>
+            </p>
+            <h2>Results and Review</h2>
+            <p>
+                The project initially started off with just the form. As I've had experience using the form feature from Netlify creating my portfolio, Netlify was a great option to host this webpage.
+            </p>
+            <p>
+                The website is also designed for a mobile experience, as reminders are sent to a group chat on primarily IPhones, it was in the teams best interest to have a mobile friendly website.
+            </p>
+            <p>
+                Though collecting availability was now solved, members still requested to see which performances they were required to go to. Being able to reuse my <code>card</code> styles, I added a new page to see the current lineups for each performance, allowing members to find when they are needed are record it in their own calendar.
+            </p>
+            <div class="image-container">
+                <img src="images/empire-log/screenshot-1.png">
+            </div>
+            <p>
+                Overall the project was able to achieve the goals required. The only things that I would have enjoyed would have been to format the buttons for navigation a bit better, as on the website they can look out of place, even though the placement is designed for a mobile experience.
+            </p>
+        </section>
+    </main>
+    <script src="static/js/script.js"> </script>
+</body>
+
+</html>

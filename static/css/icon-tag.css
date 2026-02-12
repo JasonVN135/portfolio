@@ -1,11 +1,15 @@
 :root {
     /* Hex color fallbacks for maximum compatibility */
+    --color-tag-html-hex: #E34C26;
+    --color-tag-css-hex: #66D3FA;
     --color-tag-js-hex: #ffff66;
     --color-tag-python-hex: #ffd65c;
     --color-tag-ansible-hex: #ff5c5c;
     --color-tag-godot-hex: #5c9eff;
     
     /* Standard HSL format with commas (better mobile support) */
+    --color-tag-html: 12, 77%, 52%;
+    --color-tag-css: 196, 94%, 69%;
     --color-tag-js: 60, 100%, 70%;
     --color-tag-python: 30, 100%, 70%;
     --color-tag-ansible: 0, 100%, 70%;
@@ -37,6 +41,70 @@
     /* Use will-change for better mobile performance */
     will-change: background-color;
     transition: background-color 0.1s ease-in-out;
+}
+
+/* ============================================
+   HTML  Tag
+   ============================================ */
+
+.tag--html {
+    /* Hex fallback first */
+    background-color: rgba(227, 76, 38, 0.25);
+    /* Then HSLA with commas */
+    background-color: hsla(12, 77%, 52%, 0.25);
+    /* Then CSS variable */
+    background-color: hsla(var(--color-tag-html), 0.25);
+}
+
+.tag--html .tag__icon {
+    /* Hex fallback */
+    background-color: #E34C26;
+    /* HSL with commas */
+    background-color: hsl(12, 77%, 52%);
+    /* CSS variable */
+    background-color: hsl(var(--color-tag-html));
+    --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M25.428,3.333C25.238,3.121,24.967,3,24.683,3H5.317C5.033,3,4.762,3.121,4.572,3.333c-0.19,0.212-0.28,0.495-0.249,0.777 l2.202,19.823c0.044,0.403,0.329,0.74,0.719,0.851l7.48,2.137c0.09,0.026,0.183,0.039,0.275,0.039s0.185-0.013,0.275-0.039 l7.48-2.137c0.39-0.111,0.674-0.448,0.719-0.851L25.676,4.11C25.708,3.828,25.618,3.545,25.428,3.333z M20.629,10.43h-8.93 l0.212,2.542h8.503l-0.638,7.51L15.003,22l-0.047-0.015l-4.72-1.505L9.978,17.42h2.312l0.101,1.189l2.637,0.581l2.591-0.582 l0.275-3.213h-8.09L9.178,8h11.659L20.629,10.43z"></path></svg>');
+}
+
+.tag--html .tag__name {
+    /* Hex fallback */
+    color: #E34C26;
+    /* HSL with commas */
+    color: hsl(12, 77%, 52%);
+    /* CSS variable */
+    color: hsl(var(--color-tag-html));
+}
+
+/* ============================================
+   CSS Tag
+   ============================================ */
+
+.tag--css {
+    /* Hex fallback first */
+    background-color: rgba(102, 211, 250, 0.25);
+    /* Then HSLA with commas */
+    background-color: hsla(196, 94%, 69%, 0.25);
+    /* Then CSS variable */
+    background-color: hsla(var(--color-tag-css), 0.25);
+}
+
+.tag--css .tag__icon {
+    /* Hex fallback */
+    background-color: #66D3FA;
+    /* HSL with commas */
+    background-color: hsl(196, 94%, 69%);
+    /* CSS variable */
+    background-color: hsl(var(--color-tag-css));
+    --icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"><path fill-rule="evenodd" d="M 42 6 L 39 40 L 25 44 L 11 40 L 8 6 Z M 16.800781 28 L 20.800781 28 L 20.898438 30.5 L 25 31.898438 L 29.101563 30.5 L 29.398438 26 L 20.601563 26 L 20.398438 22 L 29.601563 22 L 29.898438 18 L 16.101563 18 L 15.800781 14 L 34.101563 14 L 33.601563 22 L 32.898438 33.5 L 25 36.101563 L 17.101563 33.5 Z"></path></svg>');
+}
+
+.tag--css .tag__name {
+    /* Hex fallback */
+    color: #66D3FA;
+    /* HSL with commas */
+    color: hsl(196, 94%, 69%);
+    /* CSS variable */
+    color: hsl(var(--color-tag-css));
 }
 
 
