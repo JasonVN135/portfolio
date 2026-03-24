@@ -98,3 +98,29 @@ ul {
     height: auto;
     margin: var(--spacing-md) 0;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* If the last row has only one item (odd count) */
+.gallery img:last-child:nth-child(odd) {
+    grid-column: 1 / -1;   /* span both columns */
+    justify-self: center;  /* center it */
+    width: 50%;            /* same visual size as others */
+}
+
+@media (max-width: 850px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

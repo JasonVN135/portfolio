@@ -203,7 +203,7 @@ a {
 
 .menu-btn {
     display: none;
-    
+    cursor: pointer;
 }
 
 /* ============================================
