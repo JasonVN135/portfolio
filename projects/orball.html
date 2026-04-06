@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/pages.css">
+    <link rel="stylesheet" href="static/css/icon-btn.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Orball</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="sidebar">
+            <li class="close-btn">
+                <a onclick="hideSidebar()">
+                    <span class="icon-btn__icon icon-btn__icon--close"></span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="normal">
+            <li>
+                <a href="index.html">
+                    <span>Jason Nguyen</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="projects.html">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="hideOnMobile">
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li class="menu-btn" onclick="showSidebar()">
+                <a>
+                    <span class="icon-btn__icon icon-btn__icon--menu"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
+
+        <!-- SECTION 1: HEADER -->
+        <section id="header-section">
+            <img src="images/orball/cover.png">
+            <h1>Orball</h1>
+            <div class="subheading">
+                <span class="date">December 21st, 2025</span>
+                <a href="https://kayninezz.itch.io/orball" target="_blank" rel="noopener noreferrer" class="header-link">
+                    <span class="icon-btn__icon small icon-btn__icon--itchio"></span>
+                    <span class="text">itch.io</span>
+                </a>
+            </div>
+        </section>
+        <section id="body-section">
+            <h2>Overview</h2>
+            <p>Orball is a simple high score arcade game where you steer your orange ball to collide with incoming balls to destroy and increase your high score.
+                Colliding with other balls will increase your speed, unlocking abilities to help clear the area faster but becoming more difficult to steer.
+            </p>
+            <h2>Project Goal</h2>
+            <p>Orball is a game jam submission for the <a href="https://itch.io/jam/godot-wild-jam-88">Godot Wild Jam #88</a> event. The Game Jam took place over
+            10 days, where participants were tasked to finish creating a video game following the Jam's prompt <strong>Momentum</strong>.</p>
+            <h2>Development</h2>
+            <p>
+                Development was over the course of 10 days, however due to outside events, a majority of the development was on the final 3 days. Developing a full physics game was out of scope as I lacked experience in creating physics based games.</p>
+            <p>
+                I've attempted a previous Game Jam before, but was unsuccessful in putting a game that was supported on the browser. The game also lacked a lot of polish as many mechanics were not realized and the game did not feel fun to control or play.
+            </p>
+            <p>
+                With the goal of creating a simple arcade style game, I want to create something simple that players can pick up quickly and play for a short amount of time.
+            </p>
+            <p>
+                Many of the goals for the game were reached with minor adjustments along the way. Along the way, new tasks were added in order to improve gameplay and game understanding such as simple prompts explaining controls and goals.
+            </p>
+            <p>
+                Game Mechanics Include:
+            </p>
+            <h2>Gameplay Features</h2>
+            <p>Game Features Include:</p>
+            <ul>
+                <li>Accelerating movement after successful collisions of targets.</li>
+                <li>Ability system to assist in scoring points and survivability at the cost of momentum.</li>
+                <li>Variety of targets with risk and reward.</li>
+                <li>A consistent art style.</li>
+                <li>Sound effects and particles for satisfying collisions</li>
+            </ul>
+            <h2>Results and Review</h2>
+            <p>
+                The game performed decent in the Game Jam, placing 80th out of 155 entries. Many of the scoring criterias were rated above average, with the simple controls ranked 40th.
+            </p>
+            <div>
+                <img src="images/orball/screenshot-4.png">
+            </div>
+            <p>
+                The worse performing criterias were graphics and audio. As the game was mainly flat objects, it is understandable. The game does have an environmental glow the help with effects, but exporting my game to web removes the environmental glow.
+            </p>
+            <p>
+                As for audio, even though I believe the sound effects were fitting, the lack of ambience or background music, along with the quietness of the game caused the game to feel boring to many.
+            </p>
+            <p>
+                Overall, I'm happy with Orball and satisfied with what I accomplished. Though I wished I placed higher, being able to create a game that is replayable was a great learning experience in what it takes to create a successful game. I had more that I wanted to add in Orball but ran out of time. Eventually I do plan to provide some minor updates, even if they go unnoticed.
+            </p>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="images/orball/screenshot-1.png">
+                <img src="images/orball/screenshot-2.png">
+                <img src="images/orball/screenshot-3.png">
+                <img src="images/orball/screenshot-4.png">
+                <img src="images/orball/screenshot-5.png">
+            </div>
+        </section>
+    </main>
+    <script src="static/js/script.js"> </script>
+</body>
+
+</html>

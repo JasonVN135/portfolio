@@ -1,0 +1,20 @@
+[
+    {
+        "id": "orball",
+        "name": "Orball",
+        "tools": ["godot"],
+        "description": "Control an orange ball inside an octagon, crashing into flying balls to build momentum and score points. Spend your built-up charges on powerful abilities to survive tougher enemies and chase a high score."
+    },
+    {
+        "id": "empire-log",
+        "name": "Empire Logistics",
+        "tools": ["html", "css", "js"],
+        "description": "Management page for Empire Lion Dance. Allow members to signup for performances and view upcoming performances."
+    },
+    {
+        "id": "slick-shot",
+        "name": "Slick Shot",
+        "tools": ["godot"],
+        "description": "A top down shooter traveling through a randomly generated map. Defeat squares, gain powerups, and slide around to defeat the big square!"
+    }
+]
