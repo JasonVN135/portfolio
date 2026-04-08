@@ -78,7 +78,7 @@
 
     --typography-body-largest: 1.4rem / 1.5em var(--font-family-primary);
     --typography-body-large: 1.1rem / 1.5em var(--font-family-primary);
-    --typography-body-base: 1.1rem / 1.5em var(--font-fam   ily-primary);
+    --typography-body-base: 1.1rem / 1.5em var(--font-family-primary);
     --typography-body-small: 0.8rem / 1.5em var(--font-family-primary);
     --typography-body-smallest: 0.6rem / 1.5em var(--font-family-primary);
     --typography-heading-largest: 600 3rem/1.2em var(--font-family-secondary);

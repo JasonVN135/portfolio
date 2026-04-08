@@ -21,13 +21,17 @@ h3 {
 }
 
 p {
-    font: var(--typography-body-large);
+    font: var(--typography-body-base);
     margin-bottom: var(--spacing-xs);
 }
 
-ul {
-    font: var(--typography-body-large);
+main ul {
+    font: var(--typography-body-base);
     padding-left: var(--spacing-lg);
+}
+
+main li {
+    font: var(--typography-body-base);
 }
 
 #header-section {
@@ -122,5 +126,28 @@ ul {
 
     .gallery {
         grid-template-columns: 1fr;
+    }
+
+    .gallery img:last-child:nth-child(odd) {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .subheading {
+        font: var(--typography-body-base);
+        flex-direction: column;
+    }
+
+    #header-section .date {
+        margin-right: 0px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    #header-section .header-link {
+        display: flex;
+        justify-content: center;
+        color: var(--color-primary-base); 
     }
 }

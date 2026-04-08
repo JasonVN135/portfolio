@@ -13,8 +13,8 @@ const toolDict = {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    linkProjectClick();
     createProjectCards();
+    
 })
 
 function showSidebar() {
@@ -26,6 +26,8 @@ function hideSidebar() {
 }
 
 function linkProjectClick() {
+    console.log("HERE");
+    console.log(cards);
     cards.forEach(card => {
         const projectName = card.dataset.project;
         card.addEventListener("click", function() {
@@ -55,6 +57,11 @@ async function createProjectCards() {
     for (let i = data.length - 1; i >= 0; i--) {
         const card = createCard(data[i]);
         projectCards.appendChild(card);
+
+        const projectName = card.dataset.project;
+        card.addEventListener("click", function() {
+            window.location.href = "projects/" + projectName + ".html";
+        })
     }
 }
 
