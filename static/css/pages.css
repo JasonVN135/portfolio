@@ -48,9 +48,6 @@ main li {
     border-radius: 16px;
 }
 
-#header-section .date {
-    margin-right: var(--spacing-lg);
-}
 
 .subheading {
     font: var(--typography-body-base);
@@ -58,6 +55,7 @@ main li {
     justify-content: center;
     align-items: bottom;
     font-weight: 600;
+    gap: var(--spacing-md);
 }
 
 #header-section .header-link {
@@ -138,11 +136,7 @@ main li {
     .subheading {
         font: var(--typography-body-base);
         flex-direction: column;
-    }
-
-    #header-section .date {
-        margin-right: 0px;
-        margin-bottom: var(--spacing-sm);
+        gap: var(--spacing-sm);
     }
 
     #header-section .header-link {
